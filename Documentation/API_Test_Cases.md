@@ -27,6 +27,7 @@
   "createdAt": "2025-02-01T12:34:56.789Z"
 }
 - **Status:** [Pass]
+
 3.
 ### Test Case: Verify Error Handling for Invalid Data (POST Request)
 - **ID:** TC_API_003
@@ -45,17 +46,13 @@
     "createdAt": "2025-02-02T20:54:13.532Z"
   }
 
-
-4. Test Case: Verify Data Consistency After User Creation (GET Request)
-  -ID: TC_API_004
-  -Title: Verify newly created user appears in the user list
-  -Preconditions: A user has been created via POST request
-
-Test Steps:
-  1)Send a GET request to https://demoqa.com/api/users
-  2)Verify the new user exists in the response data
-  
-  -Expected Result: The created user's data matches the data sent in the POST request
-  -Actual Result: [To be filled after execution]
-  -Status: [Pass/Fail]
-
+4. ### Test Case: Verify Data Consistency After User Creation (GET Request)
+- **ID:** TC_API_004
+- **Title:** Verify newly created user appears in the user list
+- **Preconditions:** A user has been created via a POST request
+- **Test Steps:**
+  1. Send a GET request to `https://reqres.in/api/users`
+  2. Check if the created user is present in the response
+- **Expected Result:** The created user's data matches the data from the POST request.
+- **Actual Result:** The created user does **NOT** appear in the user list. The API returns predefined demo data.
+- **Status:** **Fail** (Expected behavior for demo API without persistent storage)
