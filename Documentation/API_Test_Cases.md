@@ -1,15 +1,13 @@
-1. Test Case: Verify GET Request for User List
-  -ID: TC_API_001
-  -Title: Verify GET request returns a list of users
-  -Preconditions: Postman is configured with the correct API endpoint
-
-Test Steps:
-  1)Open Postman
-  2)Send a GET request to https://demoqa.com/api/users
-  3)Expected Result: Response status is 200 OK, and the response body contains a list of users
-
-  -Actual Result: [To be filled after execution]
-  -Status: [Pass/Fail]
+### Test Case: Verify GET Request for User List
+- **ID:** TC_API_001
+- **Title:** Verify GET request returns a list of users
+- **Preconditions:** Postman is configured with the correct API endpoint
+- **Test Steps:**
+  1. Open Postman
+  2. Send a GET request to `https://reqres.in/api/users`
+- **Expected Result:** Response status is 200 OK, and the response body contains a list of users
+- **Actual Result:** Status: 200 OK. The user list returned successfully with 6 users on the first page.
+- **Status:** [Pass]
 
 2. Test Case: Verify POST Request to Create New User
   -ID: TC_API_002
