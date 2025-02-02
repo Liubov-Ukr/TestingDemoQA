@@ -27,24 +27,24 @@
   "createdAt": "2025-02-01T12:34:56.789Z"
 }
 - **Status:** [Pass]
+3.
+### Test Case: Verify Error Handling for Invalid Data (POST Request)
+- **ID:** TC_API_003
+- **Title:** Verify API returns an error for invalid data
+- **Preconditions:** Postman is configured with the correct API endpoint
+- **Test Steps:**
+  1. Open Postman
+  2. Send a POST request with invalid data
+- **Expected Result:** Status: 400 Bad Request. The response contains an error message.
+- **Actual Result:** The API returned status 201 Created, and created a resource with invalid data:
+  ```json
+  {
+    "name": "",
+    "email": "invalidemail",
+    "id": "509",
+    "createdAt": "2025-02-02T20:54:13.532Z"
+  }
 
-3. Test Case: Verify Error Handling for Invalid Data (POST Request)
-  -ID: TC_API_003
-  -Title: Verify API returns an error for invalid data
-  -Preconditions: Postman is configured with the correct API endpoint
-
-Test Steps:
-  1)Open Postman
-  2)Send a POST request to https://demoqa.com/api/users with invalid JSON:
-    
-    {
-      "name": "",
-      "email": "invalidemail"
-    }
-
-  -Expected Result: Response status is 400 Bad Request, and the response body contains an error message
-  -Actual Result: [To be filled after execution]
-  -Status: [Pass/Fail]
 
 4. Test Case: Verify Data Consistency After User Creation (GET Request)
   -ID: TC_API_004
