@@ -20,6 +20,7 @@
   2. Send a POST request to `https://reqres.in/api/users` with valid data
 - **Expected Result:** Status: 201 Created. User data is returned with an ID and timestamp.
 - **Actual Result:** A new resource was created successfully. Status: 201 Created. The response contains user data with ID and timestamp:
+```json
 {
   "name": "Camilla QA",
   "job": "QA Engineer",
@@ -65,7 +66,9 @@
   1. Open Postman
   2. Send a GET request to `https://reqres.in/api/users`
   3. Add the following test script in the **Post-response** 
-     pm.test("Status code is 200", function () {
+```json
+  pm.test("Status code is 200", function ()
+    {
          pm.response.to.have.status(200);
      });
      ```
@@ -81,7 +84,7 @@
   1. Open Postman
   2. Send a GET request to `https://reqres.in/api/users`
   3. Add the following test script in the **Post-response**
-     
+     ```json
      pm.test("Response contains user data", function () {
          var jsonData = pm.response.json();
          pm.expect(jsonData.data).to.be.an("array");
@@ -105,12 +108,13 @@
 3. Enter the URL: `https://reqres.in/api/users`.
 4. Go to the **Body** tab → Select **raw** → Choose **JSON**.
 5. Add the following JSON:
-   {
+```json
+  {
      "name": "Camilla QA",
      "job": "QA Engineer"
    }
  6. Go to the Tests tab and add this script:
-
+    ```json
     pm.test("Status code is 201 (User Created)", function () {
         pm.response.to.have.status(201);
     });
