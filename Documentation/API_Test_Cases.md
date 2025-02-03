@@ -70,7 +70,7 @@
      });
      ```
 - **Expected Result:** The response status code should be **200 OK**
-- **Actual Result:** [To be filled after execution]
+- **Actual Result:** Status code is 200
 - **Status:** Passed
 
 ### 6. **Test Case: Verify Response Structure for User Data**
