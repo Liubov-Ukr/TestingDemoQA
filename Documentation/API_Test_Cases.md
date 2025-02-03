@@ -94,3 +94,44 @@
 - **Actual Result:** Response contains user data
 - **Status:** Passed
 
+  ### 7. Test Case: Verify User Creation (POST Request)
+- **ID:** TC_API_003
+- **Title:** Verify User Creation via POST Request
+- **Preconditions:** Postman is configured with the correct API endpoint (`https://reqres.in/api/users`)
+  
+**Test Steps:**
+1. Open Postman.
+2. Set the request method to **POST**.
+3. Enter the URL: `https://reqres.in/api/users`.
+4. Go to the **Body** tab → Select **raw** → Choose **JSON**.
+5. Add the following JSON:
+   {
+     "name": "Camilla QA",
+     "job": "QA Engineer"
+   }
+ 6. Go to the Tests tab and add this script:
+
+    pm.test("Status code is 201 (User Created)", function () {
+        pm.response.to.have.status(201);
+    });
+    
+    pm.test("Response contains user details", function () {
+        var jsonData = pm.response.json();
+        pm.expect(jsonData).to.have.property("name", "Camilla QA");
+        pm.expect(jsonData).to.have.property("job", "QA Engineer");
+        pm.expect(jsonData).to.have.property("id");
+        pm.expect(jsonData).to.have.property("createdAt");
+    });
+
+  7. Click Send.
+ **Expected Result:** 
+  - Status code: 201 Created
+  - The response body contains:
+  - "name": "Camilla QA"
+  - "job": "QA Engineer"
+  - An auto-generated "id"
+  - A timestamp "createdAt"
+ 
+ **Actual Result:** Status code is 201 (User Created)
+                    The response contains user details
+- **Status:** Passed
