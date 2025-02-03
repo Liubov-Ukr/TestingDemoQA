@@ -121,7 +121,7 @@ pm.test("Status code is 201 (User Created)", function () {
 
 pm.test("Response contains user details", function () {
     var jsonData = pm.response.json();
-    pm.expect(jsonData).to.have.property("name", "Camilla QA");
+    pm.expect(jsonData).to.have.property("name", "Liubov QA");
     pm.expect(jsonData).to.have.property("job", "QA Engineer");
     pm.expect(jsonData).to.have.property("id");
     pm.expect(jsonData).to.have.property("createdAt");
@@ -132,7 +132,7 @@ pm.test("Response contains user details", function () {
 **Expected Result:**
 - Status code: 201 Created
 - The response body contains:
-  - "name": "Camilla QA"
+  - "name": "Liubov QA"
   - "job": "QA Engineer"
   - An auto-generated "id"
   - A timestamp "createdAt"
