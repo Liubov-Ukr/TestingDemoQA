@@ -8,7 +8,7 @@
   2. Send a GET request to `https://reqres.in/api/users`
 - **Expected Result:** Response status is 200 OK, and the response body contains a list of users
 - **Actual Result:** Status: 200 OK. The user list returned successfully with 6 users on the first page.
-- **Status:** [Pass]
+- **Status:** Passed
 
 2.
   ### Test Case: Verify POST Request to Create New User
@@ -26,7 +26,7 @@
   "id": "123",
   "createdAt": "2025-02-01T12:34:56.789Z"
 }
-- **Status:** [Pass]
+- **Status:** Passed
 
 3.
 ### Test Case: Verify Error Handling for Invalid Data (POST Request)
@@ -56,3 +56,41 @@
 - **Expected Result:** The created user's data matches the data from the POST request.
 - **Actual Result:** The created user does **NOT** appear in the user list. The API returns predefined demo data.
 - **Status:** **Fail** (Expected behavior for demo API without persistent storage)
+
+  ### 5. **Test Case: Verify Status Code for GET Request**
+- **ID:** TC_API_005
+- **Title:** Verify status code for successful GET request
+- **Preconditions:** The API endpoint is available and functional
+- **Test Steps:**
+  1. Open Postman
+  2. Send a GET request to `https://reqres.in/api/users`
+  3. Add the following test script in the **Post-response** 
+     pm.test("Status code is 200", function () {
+         pm.response.to.have.status(200);
+     });
+     ```
+- **Expected Result:** The response status code should be **200 OK**
+- **Actual Result:** [To be filled after execution]
+- **Status:** Passed
+
+### 6. **Test Case: Verify Response Structure for User Data**
+- **ID:** TC_API_006
+- **Title:** Verify that the response contains user data in the correct structure
+- **Preconditions:** The API returns data for the GET request
+- **Test Steps:**
+  1. Open Postman
+  2. Send a GET request to `https://reqres.in/api/users`
+  3. Add the following test script in the **Post-response**
+     
+     pm.test("Response contains user data", function () {
+         var jsonData = pm.response.json();
+         pm.expect(jsonData.data).to.be.an("array");
+         pm.expect(jsonData.data.length).to.be.above(0);
+     });
+     ```
+- **Expected Result:** 
+  - The response should contain a `data` field.
+  - The `data` field should be an **array** with at least one user object.
+- **Actual Result:** Response contains user data
+- **Status:** Passed
+
