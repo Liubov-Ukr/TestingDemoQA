@@ -2,6 +2,7 @@
 ### 📄 **Bug Information:**
 
 - **Bug ID:** BR_002  
+ - **Related Test Case:** TC_API_004
 - **Title:** Newly Created User Does Not Appear in the User List  
 - **Reported By:** Liubov  
 - **Date Reported:** 02.02.2025  
