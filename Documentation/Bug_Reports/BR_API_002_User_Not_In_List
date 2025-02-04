@@ -10,7 +10,7 @@
 ---
 
 ### 🔍 **Description:**  
-After creating a new user via a **POST** request, the user’s data does not appear in the response to a subsequent **GET** request.  
+After creating a new user via a **POST** request, the user’s data does not appear in response to a subsequent **GET** request.  
 
 ---
 
@@ -41,8 +41,8 @@ The newly created user is **missing** from the list.
 ---
 
 ### 📷 **Attachments:**  
-- Screenshots of both the **POST** and **GET** requests  
+[**Postman screenshot showing the response**](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Screenshots/%D0%A1reated-User-Not-Displayed-in-User-List.png)
 
 ### ⚙️ **Severity:** Low *(Since the API is for demo purposes)*  
 ### 🔗 **Status:** Open  
-```
+
