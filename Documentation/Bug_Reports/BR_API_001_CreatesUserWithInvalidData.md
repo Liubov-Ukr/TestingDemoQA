@@ -22,6 +22,7 @@ When sending a POST request with an empty name field and an invalid email format
   "name": "",
   "email": "invalidemail"
 }
+
 - Click Send.
 
 ### ✅ **Expected Result:**
