@@ -8,7 +8,7 @@
 - **Expected Result:** Response status is 200 OK, and the response body contains a list of users
 - **Actual Result:** Status: 200 OK. The user list returned successfully with 6 users on the first page.
 - **Status:** Passed
-
+---
 ### Test Case: Verify POST Request to Create New User
 - **ID:** TC_API_002
 - **Title:** Verify POST request successfully creates a new user
@@ -27,7 +27,7 @@
 }
 ```
 - **Status:** Passed
-
+---
 ### Test Case: Verify Error Handling for Invalid Data (POST Request)
 - **ID:** TC_API_003
 - **Title:** Verify API returns an error for invalid data
@@ -45,8 +45,9 @@
   "createdAt": "2025-02-02T20:54:13.532Z"
 }
 ```
+- [View detailed bug report with screenshot ➜ BR_API_001](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_API_001_CreatesUserWithInvalidData.md)
 - **Status:** Failed
-
+---
 ### Test Case: Verify Data Consistency After User Creation (GET Request)
 - **ID:** TC_API_004
 - **Title:** Verify newly created user appears in the user list
@@ -56,8 +57,9 @@
   2. Check if the created user is present in the response
 - **Expected Result:** The created user's data matches the data from the POST request.
 - **Actual Result:** The created user does **NOT** appear in the user list. The API returns predefined demo data.
+- [View detailed bug report with screenshot ➜ BR_API_002](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_API_002_User_Not_In_List)
 - **Status:** **Fail** (Expected behavior for demo API without persistent storage)
-
+---
 ### Test Case: Verify Status Code for GET Request
 - **ID:** TC_API_005
 - **Title:** Verify status code for successful GET request
@@ -74,7 +76,7 @@ pm.test("Status code is 200", function () {
 - **Expected Result:** The response status code should be **200 OK**
 - **Actual Result:** Status code is 200
 - **Status:** Passed
-
+---
 ### Test Case: Verify Response Structure for User Data
 - **ID:** TC_API_006
 - **Title:** Verify that the response contains user data in the correct structure
@@ -95,7 +97,7 @@ pm.test("Response contains user data", function () {
   - The `data` field should be an **array** with at least one user object.
 - **Actual Result:** Response contains user data
 - **Status:** Passed
-
+---
 ### Test Case: Verify User Creation (POST Request)
 - **ID:** TC_API_007
 - **Title:** Verify User Creation via POST Request
