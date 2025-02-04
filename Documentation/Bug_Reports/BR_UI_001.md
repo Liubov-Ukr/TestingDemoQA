@@ -1,4 +1,4 @@
-- **Id**BR_UI_001
+- **Id:** BR_UI_001
 - **Title:** User Can Enter Special Characters in First and Last Name Fields  
 - **Severity:** Minor 
 - **Preconditions:** User is on the [**Web Tables page**](https://demoqa.com/webtables)
