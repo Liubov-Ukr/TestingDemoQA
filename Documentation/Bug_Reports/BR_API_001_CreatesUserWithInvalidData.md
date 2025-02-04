@@ -27,6 +27,6 @@ The API should return a 400 Bad Request error with a validation error message.
 The API returns a 201 Created status and creates a user with invalid data.
 
 📷 **Attachments:**
-[Postman screenshot showing the response] (https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Screenshots/Test-Case-Verify-Error-Handling-for-Invalid-Data-POST-Request.png)
+[**Postman screenshot showing the response**](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Screenshots/Test-Case-Verify-Error-Handling-for-Invalid-Data-POST-Request.png)
 ⚙️ Severity: Medium (The API does not validate data, which could lead to inconsistent information in the system)
 🔗 Status: Open
