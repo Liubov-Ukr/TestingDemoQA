@@ -90,7 +90,8 @@
   - ⚠️ The system **accepted** age **17** **without any validation error**, which **does not meet the expected behavior**.  
   - 🚫 It was **impossible to enter** a three-digit number like **100** — the system **restricts input to two digits** without displaying an error message.  
   - ✅ The system **accepted** age **1** **without any validation error**, which also **does not meet the expected behavior**.  
-  - ❌ The system **did not allow entering** the value **-1**, which is correct, but **no validation message** was displayed.  
+  - ❌ The system **did not allow entering** the value **-1**, which is correct, but **no validation message** was displayed.
+  - - [View detailed bug report with screenshot ➜ BR_UI_002](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_002_Age_Field_Validation_Issue)
 - **Status:** ❌ **Fail**  
 
 ## 📝 **Negative Testing**
@@ -110,7 +111,8 @@
   - The system should **prevent submission** and display a **validation error message** indicating that special characters are not allowed in the fields.  
   - Alternatively, the system should **sanitize the input** automatically, removing special characters.  
 - **Actual Result:**  
-  - The form was submitted successfully without any validation error.  
+  - The form was submitted successfully without any validation error.
+  - [View detailed bug report with screenshot ➜ BR_UI_001](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_001_User_Can_Enter_Special_Characters.md)
 - **Status:** ❌ **Fail**  
 
 ## 📝 **Cross-Browser Testing**
