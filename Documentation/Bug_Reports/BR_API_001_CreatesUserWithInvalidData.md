@@ -22,9 +22,9 @@ When sending a POST request with an empty name field and an invalid email format
   "name": "",
   "email": "invalidemail"
 }
-
+```
 - Click Send.
-
+---
 ### ✅ **Expected Result:**
 The API should return a 400 Bad Request error with a validation error message.
 
