@@ -65,15 +65,14 @@
   - The user can successfully modify the content of the table’s fields, and the updated data is saved correctly.  
   - The user can delete records, which are no longer visible in the table after deletion.  
 - **Status:** [Pass]  
-
+---
 ## 📝 **Boundary Value Testing**
-
+---
 ### 📋 **Test Case 5: Verify Age Field with Minimum and Maximum Values**  
 - **ID:** TC_UI_005  
 - **Title:** Verify that the Age field accepts values between 18 and 99  
 - **Preconditions:** User is on ([**Web Tables page**](https://demoqa.com/webtables))
- 
-- **Test Steps:**  
+ - **Test Steps:**  
   1. Enter **18** in the Age field and submit.  
   2. Enter **99** in the Age field and submit.  
   3. Enter **17** and submit to check for validation errors.  
@@ -93,9 +92,9 @@
   - ❌ The system **did not allow entering** the value **-1**, which is correct, but **no validation message** was displayed.
   - - [View detailed bug report with screenshot ➜ BR_UI_002](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_002_Age_Field_Validation_Issue)
 - **Status:** ❌ **Fail**  
-
+---
 ## 📝 **Negative Testing**
-
+---
 ### 🔤 **Test Case 6: Verify Form Submission with Special Characters in Name Field**  
 - **ID:** TC_UI_006  
 - **Title:** Verify Error When Special Characters Are Entered in the Full Name Field  
@@ -114,36 +113,55 @@
   - The form was submitted successfully without any validation error.
   - [View detailed bug report with screenshot ➜ BR_UI_001](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_001_User_Can_Enter_Special_Characters.md)
 - **Status:** ❌ **Fail**  
-
+---
 ### 🔤 **Test Case 7: Check Validation Messages for Incorrect Input**  
 - **ID:** TC_UI_007  
 - **Title:** Verify Validation Messages for Incorrect Input  
 - **Preconditions:**  
   - User is on the [**Text Box** page](https://demoqa.com/text-box)  
   - The form is loaded correctly without any issues  
-
 - **Test Steps:**  
   1. Enter **"558798#)-@"** in all fields (Full Name, Email, Current Address, and Permanent Address).  
   2. Click the **Submit** button.  
-
 - **Expected Result:**  
   - The system should **prevent submission** and display a **validation error message** or **highlight the invalid field** in red to indicate incorrect input.  
   - Alternatively, the system should **sanitize the input** by automatically removing special characters.  
-
 - **Actual Result:**  
   - ❌ The fields **Full Name, Current Address, and Permanent Address** were **accepted without any validation error** or **highlighting**, meaning the system allows special characters in these fields.  
   - ✅ The **Email** field correctly **highlighted the invalid input**, indicating an incorrect email format.  
-
 - **Bug Report Reference:**  
   - [View detailed bug report with screenshot ➜ BR_UI_003](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_003_fields_accepted_without_validation_error_or_highlighting.md)  
-
 - **Status:** ❌ **Fail**  
+---
+### 🔤 **Test Case 8: Check Required Fields Cannot Be Left Empty**  
+- **ID:** TC_UI_008  
+- **Title:** Ensure Required Fields Cannot Be Left Empty  
+- **Preconditions:**  
+  - User is on the [**Text Box** page](https://demoqa.com/text-box)  
+  - The form is loaded correctly without any issues
+### 🚶‍♂️ **Test Steps:**  
+1. Navigate to the **Text Box** page.  
+2. Leave all fields empty.  
+3. Click the **Submit** button.  
+4. Repeat the test, entering data only in the **Current Address** field, leaving others empty.  
+5. Click the **Submit** button again.
+### ✅ **Expected Result:**  
+- The system should **prevent submission** of the form.  
+- Required fields should be **highlighted in red** to indicate missing data.  
+- A **validation message** should be displayed (e.g., "This field is required").  
+- The **Submit** button should not trigger data submission if required fields are empty.
+### ❌ **Actual Result:**  
+- The form was **successfully submitted** even when all fields were left empty.  
+- **No validation error messages** or **highlighting** appeared to indicate missing required fields.  
+- [View detailed bug report with screenshots ➜ BR_UI_004](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_004_Empty_Fields_Submission.md)  
+### ⚙️ **Status:** ❌ **Fail**
 
+---
 
 ## 📝 **Cross-Browser Testing**
-
-### 🖥️ **Test Case 7: Verify UI Consistency Across Browsers**  
-- **ID:** TC_UI_007  
+---
+### 🖥️ **Test Case 9: Verify UI Consistency Across Browsers**  
+- **ID:** TC_UI_009  
 - **Title:** Verify the Form Layout is Consistent in Chrome, Firefox, and Edge  
 - **Preconditions:** The form is accessible in different browsers  
 - **Test Steps:**  
