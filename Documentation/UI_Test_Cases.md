@@ -115,6 +115,31 @@
   - [View detailed bug report with screenshot ➜ BR_UI_001](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_001_User_Can_Enter_Special_Characters.md)
 - **Status:** ❌ **Fail**  
 
+### 🔤 **Test Case 7: Check Validation Messages for Incorrect Input**  
+- **ID:** TC_UI_007  
+- **Title:** Verify Validation Messages for Incorrect Input  
+- **Preconditions:**  
+  - User is on the [**Text Box** page](https://demoqa.com/text-box)  
+  - The form is loaded correctly without any issues  
+
+- **Test Steps:**  
+  1. Enter **"558798#)-@"** in all fields (Full Name, Email, Current Address, and Permanent Address).  
+  2. Click the **Submit** button.  
+
+- **Expected Result:**  
+  - The system should **prevent submission** and display a **validation error message** or **highlight the invalid field** in red to indicate incorrect input.  
+  - Alternatively, the system should **sanitize the input** by automatically removing special characters.  
+
+- **Actual Result:**  
+  - ❌ The fields **Full Name, Current Address, and Permanent Address** were **accepted without any validation error** or **highlighting**, meaning the system allows special characters in these fields.  
+  - ✅ The **Email** field correctly **highlighted the invalid input**, indicating an incorrect email format.  
+
+- **Bug Report Reference:**  
+  - [View detailed bug report with screenshot ➜ BR_UI_003](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_003_fields_accepted_without_validation_error_or_highlighting.md)  
+
+- **Status:** ❌ **Fail**  
+
+
 ## 📝 **Cross-Browser Testing**
 
 ### 🖥️ **Test Case 7: Verify UI Consistency Across Browsers**  
