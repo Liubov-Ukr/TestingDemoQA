@@ -1,5 +1,5 @@
 ## 📝 **Functional Testing**
-
+---
 ### **Test Case 1: Verify Text Box Functionality**
 - **ID:** TC_UI_001  
 - **Title:** Verify Text Box Accepts Valid Input  
@@ -33,7 +33,35 @@
   - Selected checkboxes are marked with a check icon.  
   - Deselected boxes are unmarked.  
   - The result section updates correctly.  
-- **Status:** [Pass]  
+-✅ **Status:** [Pass]  
+---
+### ✔️ **Test Case 10: Ensure Only One Radio Button Can Be Selected**
+- **ID:** TC_UI_010  
+- **Title:** Ensure Only One Radio Button Can Be Selected  
+- **Preconditions:**  
+  - User is on the [**Radio Button** page](https://demoqa.com/radio-button)  
+### 🚶‍♂️ **Test Steps:**  
+1. Click the **"Yes"** radio button.  
+2. Observe the behavior of the radio button selection.  
+3. Click the **"Impressive"** radio button.  
+4. Observe the behavior of the radio button selection.  
+5. Click the **"No"** radio button.  
+6. Observe whether the selection changes.  
+### ✅ **Expected Result:**  
+- Users should be able to switch easily between radio button options.  
+- When clicking a selected radio button again, the selection should remain (radio buttons cannot be deselected manually).  
+- The user should be able to select any of the three options: **"Yes," "Impressive," and "No."**  
+- Only **one** radio button should be selected at a time.  
+### ❌ **Actual Result:**  
+- ✅ The user **can** switch between "Yes" and "Impressive" radio buttons correctly.  
+- ❌ The user **cannot select "No"**—clicking it does nothing.  
+- ✅ The user **cannot select multiple options at once**, which is expected behavior.  
+- ❌ Clicking a selected radio button **does not remove the selection**, which may not be intuitive.  
+### 🌍 **Environment:**  
+- **Browser:** Chrome 120.0  
+- **OS:** Windows 10  
+  [View detailed bug report with screenshot ➜ BR_UI_006](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_006_Ensure_Only_One_Radio_Button_Can_Be_Selected.md)
+### ⚙️ **Status:** ❌ **Fail**  
 ---
 ### 🗑️ **Test Case 3: Verify Data Reset After Page Refresh**
 - **ID:** TC_UI_003  
@@ -90,7 +118,7 @@
   - 🚫 It was **impossible to enter** a three-digit number like **100** — the system **restricts input to two digits** without displaying an error message.  
   - ✅ The system **accepted** age **1** **without any validation error**, which also **does not meet the expected behavior**.  
   - ❌ The system **did not allow entering** the value **-1**, which is correct, but **no validation message** was displayed.
-  - - [View detailed bug report with screenshot ➜ BR_UI_002](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_002_Age_Field_Validation_Issue)
+  - [View detailed bug report with screenshot ➜ BR_UI_002](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_002_Age_Field_Validation_Issue)
 - **Status:** ❌ **Fail**
 ---
   ### 📋 Test Case 9: Verify Minimum and Maximum Character Limits in Input Fields   
@@ -185,13 +213,11 @@
 - **No validation error messages** or **highlighting** appeared to indicate missing required fields.  
 - [View detailed bug report with screenshots ➜ BR_UI_004](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_004_Empty_Fields_Submission.md)  
 ### ⚙️ **Status:** ❌ **Fail**
-
 ---
-
 ## 📝 **Cross-Browser Testing**
 ---
-### 🖥️ Test Case 10: Verify UI Consistency Across Browsers
-- **ID:** TC_UI_010  
+### 🖥️ Test Case 11: Verify UI Consistency Across Browsers
+- **ID:** TC_UI_011  
 - **Title:** Verify the Form Layout is Consistent in Chrome, Firefox, and Edge  
 - **Preconditions:** The form is accessible in different browsers  
 - **Test Steps:**  
