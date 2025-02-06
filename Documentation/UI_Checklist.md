@@ -12,9 +12,9 @@
   -Verify Edit and Delete Functionality in the Table. **Status: ✅ Pass TC_UI_004**  
   -Test editing an existing record.  
   -Ensure sorting functionality works correctly for all columns.  
-  -Check pagination (if applicable).
-  -Verify Age Field with Minimum and Maximum Values **Status: ❌ Fail  TC_UI_005**
-  -Verify Form Submission with Special Characters in Name Field **Status ❌ Fail  TC_UI_006**
+  -Check pagination (if applicable).   
+  -Verify Age Field with Minimum and Maximum Values **Status: ❌ Fail  TC_UI_005**   
+  -Verify Form Submission with Special Characters in Name Field **Status ❌ Fail  TC_UI_006**   
 ---
 3. **Buttons** (Click, Double-Click, Right-Click)  
   -Verify button clicks trigger correct actions.  
