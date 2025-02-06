@@ -1,6 +1,6 @@
 ## 📝 **Functional Testing**
 
-### ✅ **Test Case 1: Verify Text Box Functionality**
+### **Test Case 1: Verify Text Box Functionality**
 - **ID:** TC_UI_001  
 - **Title:** Verify Text Box Accepts Valid Input  
 - **Preconditions:** User is on the **Text Box** page (`https://demoqa.com/text-box`)  
@@ -15,7 +15,7 @@
 - **Expected Result:**  
   - Entered data is displayed correctly below the form without any errors.  
 - **Actual Result:** [Entered data is displayed correctly below the form without any errors.]  
-- **Status:** [Pass]  
+- ✅ **Status:** [Pass]  
 ---
 ### ✔️ **Test Case 2: Verify Check Box Selection and Deselection**
 - **ID:** TC_UI_002  
@@ -91,7 +91,37 @@
   - ✅ The system **accepted** age **1** **without any validation error**, which also **does not meet the expected behavior**.  
   - ❌ The system **did not allow entering** the value **-1**, which is correct, but **no validation message** was displayed.
   - - [View detailed bug report with screenshot ➜ BR_UI_002](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_002_Age_Field_Validation_Issue)
-- **Status:** ❌ **Fail**  
+- **Status:** ❌ **Fail**
+---
+  ### 📋 Test Case 9: Verify Minimum and Maximum Character Limits in Input Fields   
+- **ID:** TC_UI_009  
+- **Title:** Test maximum and minimum character limits.   
+- **Preconditions:**  
+  - User is on the [**Text Box** page](https://demoqa.com/text-box)  
+  - The form is loaded correctly without any issues
+ - **Test Steps:**  
+  1. Enter 1 character (a) in each field:
+    - Full Name
+    - Email
+    - Current Address
+    - Permanent Address.
+  2. Click Submit.
+  3. Observe field behavior. 
+  4. Enter a long text (~255 characters a) in each field.
+  5. Click Submit.
+  6. Observe field behavior.  
+- **Expected Result:**  
+  - Fields should have minimum and maximum character input limits.
+  - Email should validate and reject incorrect input.
+  - Full Name, Current Address, and Permanent Address should have character limits.
+  - If the maximum limit is exceeded, one of the following should happen:
+  - Input restriction (users cannot enter more characters).
+  - Validation error displayed after form submission.  
+- **Actual Result:**  
+   - Email correctly displays an error for invalid input.
+   - Full Name, Current Address, and Permanent Address do not have character limits, and the form is submitted without validation errors.
+- **Status:** ❌ **Fail**
+   - [View detailed bug report with screenshot ➜ BR_UI_009](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_005_Fields_Do_Not_Have_Character_Limit_Validation.md) 
 ---
 ## 📝 **Negative Testing**
 ---
@@ -99,7 +129,7 @@
 - **ID:** TC_UI_006  
 - **Title:** Verify Error When Special Characters Are Entered in the Full Name Field  
 - **Preconditions:**  
-  - User is on the **Text Box** page ([https://demoqa.com/webtables](https://demoqa.com/webtables))  
+  - User is on the **webtables** page ([https://demoqa.com/webtables](https://demoqa.com/webtables))  
   - The form is loaded correctly without any issues  
 - **Test Steps:**  
   1. Navigate to the **webtables** page.  
@@ -160,8 +190,8 @@
 
 ## 📝 **Cross-Browser Testing**
 ---
-### 🖥️ **Test Case 9: Verify UI Consistency Across Browsers**  
-- **ID:** TC_UI_009  
+### 🖥️ Test Case 10: Verify UI Consistency Across Browsers
+- **ID:** TC_UI_010  
 - **Title:** Verify the Form Layout is Consistent in Chrome, Firefox, and Edge  
 - **Preconditions:** The form is accessible in different browsers  
 - **Test Steps:**  
