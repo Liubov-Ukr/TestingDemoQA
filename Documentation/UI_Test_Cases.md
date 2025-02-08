@@ -73,7 +73,7 @@
 - **Expected Result:**  
   - All previously entered data is cleared.  
 - **Actual Result:** [All previously entered data is cleared]  
-- **Status:** [Pass]  
+-✅ **Status:** [Pass]  
 ---
 ### 📋 **Test Case 4: Verify Edit and Delete Functionality in the Table**  
 - **ID:** TC_UI_004  
@@ -92,7 +92,77 @@
 - **Actual Result:**  
   - The user can successfully modify the content of the table’s fields, and the updated data is saved correctly.  
   - The user can delete records, which are no longer visible in the table after deletion.  
-- **Status:** [Pass]  
+-✅ **Status:** [Pass]  
+--- 
+  ### 📋 **Test Case 12: Verify data is displayed correctly in all columns**  
+- **ID:** TC_UI_012  
+- **Title:** Verify data is displayed correctly in all columns
+- **Preconditions:** User is on the **Web Tables** page on DemoQA  
+- **Test Steps:**  
+  1. Click on the **Edit (✏️)** icon in any row of the table.  
+  2. Modify the data in one or more fields (e.g., First Name, Age, Email).  
+  3. Click the **Submit** button to save changes.  
+  4. Verify if the updated data is displayed correctly in the table.  
+  - **Expected Result:**  
+  - The user can successfully modify the content of the table’s fields, and the updated data 
+    is saved correctly.  
+  - **Actual Result:**  
+  - The user can successfully modify the content of the table’s fields, and the updated data 
+    is saved correctly.  
+-✅ **Status:** [Pass]    
+--- 
+  ### 📋 **Test Case 13: Test editing an existing record.**    
+- **ID:** TC_UI_013  
+- **Title:** Test editing an existing record.   
+- **Preconditions:** User is on ([**Web Tables page**](https://demoqa.com/webtables))
+- **Test Steps:**  
+  1. Click on the **Edit (✏️)** icon in any row of the table.  
+  2. Modify the data in one or more fields (e.g., First Name, Age, Email).  
+  3. Click the **Submit** button to save changes.  
+  4. Verify if the updated data is displayed correctly in the table.  
+  - **Expected Result:**  
+  - The user can successfully modify the content of the table’s fields, and the updated data 
+    is saved correctly.  
+  - **Actual Result:**  
+  - The user can successfully modify the content of the table’s fields, and the updated data 
+    is saved correctly.  
+-✅ **Status:** [Pass]    
+---
+  ### 📋 **Test Case 14: Ensure sorting functionality works correctly for all columns**    
+- **ID:** TC_UI_014  
+- **Title** Ensure sorting functionality works correctly for all columns   
+- **Preconditions:** User is on ([**Web Tables page**](https://demoqa.com/webtables))
+### **Test Steps:**
+1. Navigate to the **Web Tables** page.  
+2. To sort the data, click on each column's header (**First Name, Last Name, Age, Email, Salary, Department**).  
+3. Observe the order of the column values after each sort operation.  
+4. Click the same column header again to check if it toggles between ascending and descending order.  
+5. Repeat the sorting test for all columns.  
+  ### **Expected Result:**  
+- When clicked, each column should **sort correctly** in ascending and descending order.  
+- The data in the table should be rearranged accordingly without errors.  
+- Sorting should remain consistent even after multiple toggles.  
+  ### **Actual Result:**  
+ ✅ Sorting functionality works correctly for all columns. The table updates as expected, and the sorting order toggles properly.  
+**Status:** ✅ **Pass** 
+
+---
+### ✔️ **Test Case 15: Verify Button Click Functionality**
+- **ID:** TC_UI_015  
+- **Title:** Verify Button Click Triggers Correct Message  
+- **Preconditions:**  
+  - User is on the [**Buttons** page](https://demoqa.com/buttons).  
+### 🚶‍♂️ **Test Steps:**  
+1. Click the **"Click Me"** button.  
+2. Observe the displayed message.  
+### ✅ **Expected Result:**  
+- After clicking the button, the message **"You have done a dynamic click"** should appear below the button.  
+### ✅ **Actual Result:**  
+- After clicking the button, the message **"You have done a dynamic click"** appears correctly.  
+### 🌍 **Environment:**  
+- **Browser:** Chrome 120.0  
+- **OS:** Windows 10  
+### 📌 **Status:** ✅ **Pass**  
 ---
 ## 📝 **Boundary Value Testing**
 ---
