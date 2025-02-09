@@ -14,8 +14,8 @@
   3. Click the **Submit** button.  
 - **Expected Result:**  
   - Entered data is displayed correctly below the form without any errors.  
-- **Actual Result:** [Entered data is displayed correctly below the form without any errors.]  
-- ✅ **Status:** [Pass]  
+- **Actual Result:** Entered data is displayed correctly below the form without any errors. 
+- ✅ **Status:** Pass 
 ---
 ### ✔️ **Test Case 2: Verify Check Box Selection and Deselection**
 - **ID:** TC_UI_002  
@@ -33,35 +33,7 @@
   - Selected checkboxes are marked with a check icon.  
   - Deselected boxes are unmarked.  
   - The result section updates correctly.  
--✅ **Status:** [Pass]  
----
-### ✔️ **Test Case 10: Ensure Only One Radio Button Can Be Selected**
-- **ID:** TC_UI_010  
-- **Title:** Ensure Only One Radio Button Can Be Selected  
-- **Preconditions:**  
-  - User is on the [**Radio Button** page](https://demoqa.com/radio-button)  
-### 🚶‍♂️ **Test Steps:**  
-1. Click the **"Yes"** radio button.  
-2. Observe the behavior of the radio button selection.  
-3. Click the **"Impressive"** radio button.  
-4. Observe the behavior of the radio button selection.  
-5. Click the **"No"** radio button.  
-6. Observe whether the selection changes.  
-### ✅ **Expected Result:**  
-- Users should be able to switch easily between radio button options.  
-- When clicking a selected radio button again, the selection should remain (radio buttons cannot be deselected manually).  
-- The user should be able to select any of the three options: **"Yes," "Impressive," and "No."**  
-- Only **one** radio button should be selected at a time.  
-### ❌ **Actual Result:**  
-- ✅ The user **can** switch between "Yes" and "Impressive" radio buttons correctly.  
-- ❌ The user **cannot select "No"**—clicking it does nothing.  
-- ✅ The user **cannot select multiple options at once**, which is expected behavior.  
-- ❌ Clicking a selected radio button **does not remove the selection**, which may not be intuitive.  
-### 🌍 **Environment:**  
-- **Browser:** Chrome 120.0  
-- **OS:** Windows 10  
-  [View detailed bug report with screenshot ➜ BR_UI_006](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_006_Ensure_Only_One_Radio_Button_Can_Be_Selected.md)
-### ⚙️ **Status:** ❌ **Fail**  
+-✅ **Status:** Pass
 ---
 ### 🗑️ **Test Case 3: Verify Data Reset After Page Refresh**
 - **ID:** TC_UI_003  
@@ -94,22 +66,53 @@
   - The user can delete records, which are no longer visible in the table after deletion.  
 -✅ **Status:** [Pass]  
 --- 
-  ### 📋 **Test Case 12: Verify data is displayed correctly in all columns**  
+### ✔️ **Test Case 10: Ensure Only One Radio Button Can Be Selected**
+- **ID:** TC_UI_010  
+- **Title:** Ensure Only One Radio Button Can Be Selected  
+- **Preconditions:**  
+  - User is on the [**Radio Button** page](https://demoqa.com/radio-button)  
+### 🚶‍♂️ **Test Steps:**  
+1. Click the **"Yes"** radio button.  
+2. Observe the behavior of the radio button selection.  
+3. Click the **"Impressive"** radio button.  
+4. Observe the behavior of the radio button selection.  
+5. Click the **"No"** radio button.  
+6. Observe whether the selection changes.  
+### ✅ **Expected Result:**  
+- Users should be able to switch easily between radio button options.  
+- When clicking a selected radio button again, the selection should remain (radio buttons cannot be deselected manually).  
+- The user should be able to select any of the three options: **"Yes," "Impressive," and "No."**  
+- Only **one** radio button should be selected at a time.  
+### ❌ **Actual Result:**  
+- ✅ The user **can** switch between "Yes" and "Impressive" radio buttons correctly.  
+- ❌ The user **cannot select "No"**—clicking it does nothing.  
+- ✅ The user **cannot select multiple options at once**, which is expected behavior.  
+- ❌ Clicking a selected radio button **does not remove the selection**, which may not be intuitive.  
+### 🌍 **Environment:**  
+- **Browser:** Chrome 120.0  
+- **OS:** Windows 10  
+  [View detailed bug report with screenshot ➜ BR_UI_006](https://github.com/Liubov-Ukr/TestingDemoQA/blob/main/Documentation/Bug_Reports/BR_UI_006_Ensure_Only_One_Radio_Button_Can_Be_Selected.md)
+### ⚙️ **Status:** ❌ **Fail**  
+---
+  ### 📋 **Test Case 12: Verify Data on the Table is Displayed Correctly in all Columns**  
 - **ID:** TC_UI_012  
-- **Title:** Verify data is displayed correctly in all columns
-- **Preconditions:** User is on the **Web Tables** page on DemoQA  
-- **Test Steps:**  
-  1. Click on the **Edit (✏️)** icon in any row of the table.  
-  2. Modify the data in one or more fields (e.g., First Name, Age, Email).  
-  3. Click the **Submit** button to save changes.  
-  4. Verify if the updated data is displayed correctly in the table.  
-  - **Expected Result:**  
-  - The user can successfully modify the content of the table’s fields, and the updated data 
-    is saved correctly.  
-  - **Actual Result:**  
-  - The user can successfully modify the content of the table’s fields, and the updated data 
-    is saved correctly.  
--✅ **Status:** [Pass]    
+- **Title:** Verify data on the table is displayed correctly in all columns
+- **Preconditions:** User is on the  ([**Web Tables page**](https://demoqa.com/webtables)) 
+### 🚶‍♂️ **Test Steps:**    
+1. Navigate to the [**Web Tables** page](https://demoqa.com/webtables).  
+2. Observe the data displayed in all columns (First Name, Last Name, Age, Email, Salary, Department, Action).  
+3. Check if all information is fully visible without any truncation.  
+4. Try resizing the columns to check if truncated data becomes visible.  
+#### **Expected Result:**  
+- All data should be fully visible in each column without truncation.  
+- If truncation occurs due to column width, users should be able to resize the column to reveal the full content.  
+- The email column should display complete text or provide a tooltip when hovered over.  
+#### **Actual Result:**  
+- ✅ All columns display data correctly, except for the **Email** column, which appears truncated.  
+- ❌ The email field is **not fully visible by default**, but **it becomes visible after resizing the column**.  
+- ❌ There is **no tooltip on hover** to display the full email when the column is not expanded.  
+📌 **Status:** ⚠️ **Not a bug but a UI improvement suggestion**  
+✔ **Enhancement Suggestion:** Add a tooltip to show the full email when hovered over.
 --- 
   ### 📋 **Test Case 13: Test editing an existing record.**    
 - **ID:** TC_UI_013  
@@ -163,6 +166,59 @@
 - **Browser:** Chrome 120.0  
 - **OS:** Windows 10  
 ### 📌 **Status:** ✅ **Pass**  
+---
+### ✔️ **Test Case 16: Test double-click functionality.**
+- **ID:** TC_UI_016  
+- **Title:** Test double-click functionality.
+- **Preconditions:**  
+  - User is on the [**Buttons** page](https://demoqa.com/buttons).  
+### 🚶‍♂️ **Test Steps:**  
+1. Double-click the **"Double click Me"** button.  
+2. Observe the displayed message.  
+### ✅ **Expected Result:**  
+- After clicking the button, the message **"You have done a double click"** should appear below the button.  
+### ✅ **Actual Result:**  
+- After clicking the button, the message **"You have done a double click"** appears correctly.  
+### 🌍 **Environment:**  
+- **Browser:** Chrome 120.0  
+- **OS:** Windows 10  
+### 📌 **Status:** ✅ **Pass**  
+---
+### ✔️ **Test Case 17: Test right-click functionality.**
+- **ID:** TC_UI_017  
+- **Title:** Test right-click functionality
+- **Preconditions:**  
+  - User is on the [**Buttons** page](https://demoqa.com/buttons).  
+### 🚶‍♂️ **Test Steps:**  
+1. Right-click on the button **"Right click Me"** button.  
+2. Observe the displayed message.  
+### ✅ **Expected Result:**  
+- After clicking the button, the message **"You have done a right click"** should appear below the button.  
+### ✅ **Actual Result:**  
+- After clicking the button, the message **"You have done a right click"** appears correctly.  
+### 🌍 **Environment:**  
+- **Browser:** Chrome 120.0  
+- **OS:** Windows 10  
+### 📌 **Status:** ✅ **Pass**
+---
+### ✔️ **Test Case 18: Check hover effects and UI responsiveness.**
+- **ID:** TC_UI_018  
+- **Title:** Check hover effects and UI responsiveness.
+- **Preconditions:**  
+  - User is on the [**Buttons** page](https://demoqa.com/buttons).  
+### 🚶‍♂️ **Test Steps:**  
+1. Hover your mouse over the **"Сlick Me"** button.  
+2. Observe the behavior of the button.  
+### ✅ **Expected Result:**  
+- When hovering over the button, the following UI changes should occur:
+  -The button’s color should change.
+  -The cursor should change to indicate a clickable element.
+### ✅ **Actual Result:**  
+- The button changed color and the cursor indicated it was clickable, confirming the hover effect works correctly.
+### 🌍 **Environment:**  
+- **Browser:** Chrome 120.0  
+- **OS:** Windows 10  
+### 📌 **Status:** ✅ **Pass**
 ---
 ## 📝 **Boundary Value Testing**
 ---
